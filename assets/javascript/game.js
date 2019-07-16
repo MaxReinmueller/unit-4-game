@@ -1,24 +1,101 @@
 // stored variables
-var compPick = [''];
-var crystal1 = [''];
-var crystal2 = [''];
-var crystal3 = [''];
-var crystal4 = [''];
-var userScore = [''];
+var compPick = [];
+var crystal1 = [];
+var crystal2 = [];
+var crystal3 = [];
+var crystal4 = [];
+var userScore = 0;
+var wins = 0;
+var losses = 0;
+
 
 
 
 // after window.onload, 
-$(document).ready(function() {
+$(document).ready(function gameStart() {
+
 // computer picks a number between 19 - 120 and stores it
+var compStart = Math.floor(Math.random() * (120 - 19)) + 19;
+compPick.push(compStart);
+$("#compNumBox").html("<h2><strong>" + compPick + "</strong></h2>");
+
+// picks crystal numbers
+// crystal 1
+var crystalStart1 = Math.floor(Math.random() * 12) + 1;
+crystal1.push(crystalStart1);
+$("#crystalOne").src+= crystal1;
+console.log(crystal1, "C1");
+
+// crystal 2
+var crystalStart2 = Math.floor(Math.random() * 12) + 1;
+crystal2.push(crystalStart2);
+console.log(crystal2, "C2");
+
+// crystal 3
+var crystalStart3 = Math.floor(Math.random() * 12) + 1;
+crystal3.push(crystalStart3);
+console.log(crystal3, "C3");
+
+// crystal 4
+var crystalStart4 = Math.floor(Math.random() * 12) + 1;
+crystal4.push(crystalStart4);
+console.log(crystal4, "C4");
+
+$("#userScoreBox").html("<h2><strong>" + userScore + "</strong></h2>");
+});
 
 
-// computer picks a number between 1 - 12 for each of the 4 crystals. stored number is not displayed to user
-var crystalStart = Math.floor(Math.random() * 4);
-console.log(crystalStart);
-}); 
 
-// user clicks on one of the crystals and the score is displayed below the crystal, each click, the score is added to the old number
-// if user score matches computer number, user is given a win. game is reset
-// if user score goes over computer number, user is given a loss. game is reset
-// wins and losses are tracked
+// On click event for crystals
+$("#crystalOne").on("click", function() {
+    userScore = (Number(crystal1) + Number(userScore));    
+    console.log(crystal1, "working");
+    upDateScore()
+    WinsandLosses()
+
+});
+$("#crystalTwo").on("click", function() {
+    userScore = (Number(crystal2) + Number(userScore));    
+    console.log(crystal2, "working");
+    upDateScore()
+    WinsandLosses()
+
+});
+$("#crystalThree").on("click", function() {
+    userScore = (Number(crystal3) + Number(userScore));    
+    console.log(crystal3, "working");
+    upDateScore()
+    WinsandLosses()
+
+});
+$("#crystalFour").on("click", function() {
+    userScore = (Number(crystal4) + Number(userScore));    
+    console.log(crystal4, "working");
+    upDateScore()
+    WinsandLosses()
+
+});
+
+// updates user total score
+function upDateScore() {
+    $("#userScoreBox").html("<h2><strong>" + userScore + "</strong></h2>");
+    losses
+}
+
+// resets the game
+function gameReset() {
+
+}
+
+// keeps track of wins and losses
+function WinsandLosses() {
+if (userScore == compPick) {
+    alert("You win!")
+    gameStart()
+}
+else if (userScore > compPick) {
+    alert("you lose!")
+    losses++;
+
+}
+}

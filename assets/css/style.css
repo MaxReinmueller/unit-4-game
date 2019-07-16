@@ -22,6 +22,7 @@ h1 {
     background-color: green;
     width: 250px;
     height: 150px;
+    size: 148px;
 }
 
 #winandlossbox {
@@ -34,11 +35,7 @@ h1 {
 }
 
 #crystalimgs {
-    margin-top: 10px;
-    clear: both;
-    background-color: beige;
-    height: 125px;
-   
+    clear: both;   
 }
 
 h4 {
