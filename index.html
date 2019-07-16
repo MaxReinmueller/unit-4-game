@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <title>Crystals Collector</title>
+</head>
+
+<body>
+    <!-- Psudeo code
+    make the outline of the page in html and style it with css
+    -->
+    <h1>Crystals Collector!</h1>
+    <!-- diections -->
+    <div id="directionsBox">
+        <p>You will be given a random number at the start of the game.</p>
+
+        <p> There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your
+            total score.</p>
+
+        <p>You will win the game by matching your total score to random number, you lose the game if your total score
+            goes above the random number.</p>
+
+        <p>The value of each crystal is hidden from you until you click on it.
+            Each time when the game starts, the game will change the values of each crystal.</p>
+
+    </div>
+
+    <!-- Computers number box -->
+    <div id="compNumBox"></div>
+
+    <!-- wins/losses -->
+    <div id="winandlossbox">
+        <h3 id="win">Wins: </h3>
+        <h3 id="loss">Loss: </h3>
+    </div>
+
+    <!-- crystal images -->
+    <div id="crystalimgs">
+        <img src="">
+        <img src="">
+        <img src="">
+        <img src="">
+    </div>
+    <h4>Your total score is:</h4>
+    <div id="userScoreBox"></div>
+
+    <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Javascript -->
+<link type="text/javascript" rel="javascript" href="assets/javascript/game.js">
+</body>
+
+</html>
