@@ -10,49 +10,59 @@
 </head>
 
 <body>
-    <!-- Psudeo code
-    make the outline of the page in html and style it with css
-    -->
-    <h1>Crystals Collector!</h1>
-    <!-- diections -->
-    <div id="directionsBox">
-        <p>You will be given a random number at the start of the game.</p>
+    <div id="container">
+        <h1>Crystals Collector!</h1>
+        <!-- diections -->
+        <div id="directionsBox">
+            <p>You will be given a random number at the start of the game.</p>
 
-        <p> There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your
-            total score.</p>
+            <p> There are four crystals below. By clicking on a crystal, you will add a specific amount of points to
+                your
+                total score.</p>
 
-        <p>You will win the game by matching your total score to random number, you lose the game if your total score
-            goes above the random number.</p>
+            <p>You will win the game by matching your total score to random number, you lose the game if your total
+                score
+                goes above the random number.</p>
 
-        <p>The value of each crystal is hidden from you until you click on it.
-            Each time when the game starts, the game will change the values of each crystal.</p>
+            <p>The value of each crystal is hidden from you until you click on it.
+                Each time when the game starts, the game will change the values of each crystal.</p>
 
+        </div>
+        <hr>
+        <!-- Computers number box -->
+        <div id="magic"></div>
+            <h3>THE MAGIC NUMBER: </h3>
+            <div id="compNumBox"></div>
+        
+            <h3>YOUR SCORE:</h3>
+            <div id="userScoreBox"></div>
+
+        <!-- crystal images -->
+        <div id="crystalimgs">
+            <img id="crystalOne"
+                src="https://www.thoughtco.com/thmb/TqQm3tRT4882EvcdDbqaogKDonI=/3609x2727/filters:fill(auto,1)/close-up-of-crystal-stone-glowing-in-darkroom-583919173-56f28e5d3df78ce5f83d7284.jpg"
+                height="100px">
+            <img id="crystalTwo" src="http://thespiritscience.net/wp-content/uploads/2014/10/crystals.jpg"
+                height="100px">
+            <img id="crystalThree" src="https://images-na.ssl-images-amazon.com/images/I/411BGE2772L._SX355_.jpg"
+                height="100px">
+            <img id="crystalFour"
+                src="https://img1.exportersindia.com/product_images/bc-full/dir_188/5615550/quartz-mineral-1523962894-3786449.jpeg"
+                height="100px">
+        </div>
+        
+        <!-- wins/losses -->
+        <div id="winandlossbox">
+            <h3 id="win">Wins: </h3>
+            <h3 id="loss">Losses: </h3>
+        </div>
+       <hr>
     </div>
-
-    <!-- Computers number box -->
-    <div id="compNumBox"></div>
-
-    <!-- wins/losses -->
-    <div id="winandlossbox">
-        <h3 id="win">Wins: </h3>
-        <h3 id="loss">Losses: </h3>
-    </div>
-
-    <!-- crystal images -->
-    <div id="crystalimgs">
-        <img id="crystalOne" src="https://www.thoughtco.com/thmb/TqQm3tRT4882EvcdDbqaogKDonI=/3609x2727/filters:fill(auto,1)/close-up-of-crystal-stone-glowing-in-darkroom-583919173-56f28e5d3df78ce5f83d7284.jpg" height="100px">
-        <img id="crystalTwo" src="http://thespiritscience.net/wp-content/uploads/2014/10/crystals.jpg" height="100px">
-        <img id="crystalThree" src="https://images-na.ssl-images-amazon.com/images/I/411BGE2772L._SX355_.jpg" height="100px">
-        <img id="crystalFour" src="https://img1.exportersindia.com/product_images/bc-full/dir_188/5615550/quartz-mineral-1523962894-3786449.jpeg" height="100px">
-    </div>
-    <h4>Your total score is:</h4>
-    <div id="userScoreBox"></div>
-
     <!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Javascript -->
-<script src="assets/javascript/game.js" type="text/javascript"></script>
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
 </body>
 
 </html>
